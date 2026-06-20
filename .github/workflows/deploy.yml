@@ -1,7 +1,6 @@
 name: Deploy Project        # Tên workflow
 
-on: push                  # Trigger: chạy khi có push
-
+on: [push,workflow_dispatch]                  # Trigger: chạy khi có push hoặc workflow_dispatch              
 jobs:
   test:                   # Tên job
     runs-on: ubuntu-latest  # Chạy trên máy chủ Ubuntu của GitHub
