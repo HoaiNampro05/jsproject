@@ -21,7 +21,8 @@ jobs:
         run: npm ci
       - name: Run Tests  # Bước 4: Chạy các test
         run: npm test
-  deploy:                   # Tên job
+  deploy:       
+    needs: test             # Tên job
     runs-on: ubuntu-latest  # Chạy trên máy chủ Ubuntu của GitHub
 
     steps:
